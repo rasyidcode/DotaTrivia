@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dota Trivia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POINTS: 1200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What is the name of this hero?"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_question"
+            tools:srcCompat="@drawable/antimage" />
+
+        <Button
+            android:id="@+id/choose_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anti Mage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hero_image" />
+
+        <Button
+            android:id="@+id/choose_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Axe"
+            app:layout_constraintStart_toEndOf="@+id/choose_a"
+            app:layout_constraintTop_toTopOf="@+id/choose_a" />
+
+        <Button
+            android:id="@+id/choose_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invoker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choose_a" />
+
+        <Button
+            android:id="@+id/choose_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Earthseeker"
+            app:layout_constraintStart_toEndOf="@+id/choose_c"
+            app:layout_constraintTop_toTopOf="@+id/choose_c" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:09\ntime remaining"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choose_c" />
+
+
+        <TextView
+            android:id="@+id/text_qnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question #1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_time" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
